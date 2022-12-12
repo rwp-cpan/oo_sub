@@ -19,3 +19,5 @@ p my $protocol = getprotobyname( 'tcp' );
 p my $service = getservbyname( 'ftp' );
 
 p my $host = gethostbyname( 'localhost' );
+
+# p ${\getpwnam('root')};

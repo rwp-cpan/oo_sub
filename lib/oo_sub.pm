@@ -1,4 +1,4 @@
-package oo_sub v1.0.3;
+package oo_sub v1.0.4;
 
 use strict;   # https://perldoc.perl.org/strict
 use warnings; # https://perldoc.perl.org/warnings
@@ -65,7 +65,7 @@ oo_sub - Use object-oriented versions of built-in Perl functions
 
   say Dumper getnetbyname('loopback'); # use Data::Dumper;
 
-  say p my $time = localtime('.'); # use DDP;
+  p my $time = localtime('.'); # use DDP; (ie. Data::Printer)
 
 =head1 DESCRIPTION
 
@@ -87,15 +87,17 @@ Perl pragma to import the following modules to enable OOP in Perl for some built
 
 =item L<Net::servent>
 
+=item L<Net::hostent>
+
 =back
 
-Uses L<autoload_remote|Module::Load/autoload_remote> to achieve this.
+Uses L<C<autoload_remote>|Module::Load/autoload_remote >> to achieve this.
 
 =cut
 
 =head1 AUTHOR
 
-Elvin Aslanov <rwp.primary@gmail.com>
+L<Elvin Aslanov|https://rwp0.github.io/> C<<rwp.primary@gmail.com|mailto:rwp.primary@gmail.com>>
 
 =head1 COPYRIGHT
 
