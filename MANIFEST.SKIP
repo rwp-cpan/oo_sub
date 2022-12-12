@@ -3,6 +3,7 @@
 oo_sub.iml
 pm_to_blib
 _Deparsed_XSubs.pm
+make.sh
 
 # Makemaker generated files and dirs.
 ^MANIFEST\.
