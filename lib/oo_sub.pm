@@ -1,4 +1,4 @@
-package oop v0.0.3;
+package oo_sub v1.0.1;
 
 use strict;
 use warnings;
@@ -37,23 +37,25 @@ for my $module ( @modules ) {
 
 =head1 NAME
 
-oop - Use object-oriented versions of built-in Perl functions
+oo_sub - Use object-oriented versions of built-in Perl functions
 
 =head1 SYNOPSIS
 
-say p my $user = getpwnam('root');
+  use oo_sub;
 
-say p my $group = getgrgid(0);
+  say p my $user = getpwnam('root');
 
-say p my $file = stat('.');
+  say p my $group = getgrgid(0);
 
-say p my $time = localtime('.');
+  say p my $file = stat('.');
 
-say p my $network = getnetbyname('loopback');
+  say p my $time = localtime('.');
 
-say p my $protocol = getprotobyname('tcp');
+  say p my $network = getnetbyname('loopback');
 
-say p my $service = getservbyname('ftp');
+  say p my $protocol = getprotobyname('tcp');
+
+  say p my $service = getservbyname('ftp');
 
 =head1 DESCRIPTION
 
@@ -81,12 +83,19 @@ Uses L<autoload_remote|Module::Load/autoload_remote> to achieve this.
 
 =cut
 
+=head1 AUTHOR
+
+Elvin Aslanov <rwp.primary@gmail.com>
+
+=head1 COPYRIGHT
+
+This library is free software; you may redistribute and/or modify it
+under the same terms as Perl itself.
+
 =head1 SEE ALSO
 
 L<User::pwent>, L<File::stat>, L<Time::Piece>, L<Module:Load>
 
-=head1 AUTHOR
 
-Elvin Aslanov
 
 =cut

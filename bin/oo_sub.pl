@@ -1,5 +1,5 @@
 use v5.36;
-use oop;
+use oo_sub;
 use DDP; # CPAN: Data-Printer
 
 say p my $user = getpwnam('root');

@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use oop;        # tested module
+use oo_sub;        # tested module
 use Test::More; # testing module, cf. Test Simple w/ just one 'ok' function
 
 isa_ok getpwnam( 'root' ), 'User::pwent'; #	'getpwnam function returns an instance of User::pwent class';

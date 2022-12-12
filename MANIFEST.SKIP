@@ -1,0 +1,17 @@
+^\.idea
+^\.git
+oo_sub.iml
+pm_to_blib
+_Deparsed_XSubs.pm
+
+# Makemaker generated files and dirs.
+^MANIFEST\.
+^Makefile$
+^blib/
+^MakeMaker-\d
+
+# Temp, old and emacs backup files.
+~$
+\.old$
+^#.*#$
+^\.#

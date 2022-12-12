@@ -1,5 +1,5 @@
-* OOP
+* oo_sub
 
-Perl pragma to enable OOP (object-oriented programming) in Perl.
+Perl pragma to enable natively supported OOP (object-oriented programming) for some built-in Perl functions.
 
-Please read the POD (documentation) within =oop.pm= for the details.
+Please read the POD (documentation) within =oo_sub.pm= file for the details.
