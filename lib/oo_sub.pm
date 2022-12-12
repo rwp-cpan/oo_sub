@@ -1,33 +1,43 @@
-package oo_sub v1.0.2;
+package oo_sub v1.0.3;
 
-use strict;
-use warnings;
+use strict;   # https://perldoc.perl.org/strict
+use warnings; # https://perldoc.perl.org/warnings
 
-use Module::Load;
+use Module::Load; # https://perldoc.perl.org/Module::Load
 
-use User::pwent;
-use User::grent;
-use File::stat;
-use Time::Piece;
-use Net::netent;
-use Net::protoent;
-use Net::servent;
+use User::pwent; # https://perldoc.perl.org/User::pwent
+use User::grent; # https://perldoc.perl.org/User::grent
+
+use File::stat; # https://perldoc.perl.org/File::stat
+
+use Time::Piece; # https://perldoc.perl.org/Time::Piece
+
+use Net::netent;   # https://perldoc.perl.org/Net::netent
+use Net::protoent; # https://perldoc.perl.org/Net::protoent
+use Net::servent;  # https://perldoc.perl.org/Net::servent
+use Net::hostent;  # https://perldoc.perl.org/Net::hostent
 
 my @modules = qw(
 	User::pwent
 	User::grent
+
 	File::stat
+
 	Time::Piece
+
 	Net::netent
 	Net::protoent
 	Net::servent
+	Net::hostent
 ); # TODO: Don't repeat: find a way to to detect use-d modules somehow
 
 for my $module ( @modules ) {
-	Module::Load::autoload_remote my $caller = caller, $module;
+	Module::Load::autoload_remote caller, $module;
 }
 
 # TODO: Import modules by export categories (eg. user, time, network, file)
+
+# TODO: (?): Time::gmtime Time::localtime
 
 # https://perldoc.perl.org/Module::Load#autoload_remote
 

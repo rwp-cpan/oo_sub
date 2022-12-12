@@ -11,7 +11,7 @@ WriteMakefile(
 	LICENSE      => 'Perl',
 	META_MERGE   => {
 		resources => {
-			repository => 'https://github.com/rwp/oo_sub',
+			repository => 'https://github.com/rwp0/oo_sub',
 		},
 	},
 );
