@@ -1,4 +1,4 @@
-package oop v0.1;
+package oop 0.2;
 
 use strict;
 use warnings;
@@ -21,11 +21,13 @@ my @modules = qw(
 	Net::netent
 	Net::protoent
 	Net::servent
-);
+); # TODO: Don't repeat: find a way to to detect use-d modules somehow
 
 for my $module ( @modules ) {
-	Module::Load::autoload_remote 'main', $module;
+	Module::Load::autoload_remote my $caller = caller, $module;
 }
+
+# TODO: Import modules by export categories (eg. user, time, network, file)
 
 # https://perldoc.perl.org/Module::Load#autoload_remote
 
@@ -55,7 +57,7 @@ say p my $service = getservbyname('ftp');
 
 =head1 DESCRIPTION
 
-Imports the following modules to enable OOP in Perl for some built-in functions:
+Perl pragma to import the following modules to enable OOP in Perl for some built-in functions:
 
 =over 2
 
@@ -81,7 +83,7 @@ Uses L<autoload_remote|Module::Load/autoload_remote> to achieve this.
 
 =head1 SEE ALSO
 
-L<User::pwent>, L<User::grent>, L<File::stat>, L<Time::Piece>, L<Module:Load>
+L<User::pwent>, L<File::stat>, L<Time::Piece>, L<Module:Load>
 
 =head1 AUTHOR
 
