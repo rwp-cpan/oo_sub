@@ -1,5 +1,4 @@
 use v5.36;
-use lib '.';
 use oop;
 use DDP; # CPAN: Data-Printer
 

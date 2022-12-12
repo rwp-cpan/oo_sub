@@ -1,4 +1,4 @@
-package oop 0.2;
+package oop v0.0.3;
 
 use strict;
 use warnings;
