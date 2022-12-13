@@ -1,4 +1,4 @@
-package oo_sub v1.0.6;
+package oo_sub v1.0.7;
 
 use strict;   # https://perldoc.perl.org/strict
 use warnings; # https://perldoc.perl.org/warnings
@@ -91,13 +91,13 @@ Perl pragma to import the following modules to enable OOP in Perl for some built
 
 =back
 
-Uses L<C<autoload_remote>|Module::Load/autoload_remote >> to achieve this.
+Uses L<C<autoload_remote>|Module::Load/autoload_remote> to achieve this.
 
 =cut
 
 =head1 AUTHOR
 
-L<Elvin Aslanov|https://rwp0.github.io/> C<<rwp.primary@gmail.com|mailto:rwp.primary@gmail.com>>
+L<Elvin Aslanov|https://rwp0.github.io/> L<(rwp.primary@gmail.com)|mailto:rwp.primary@gmail.com>
 
 =head1 COPYRIGHT
 
