@@ -1,4 +1,4 @@
-package oo_sub v1.0.7;
+package oo_sub v1.0.8;
 
 use strict;   # https://perldoc.perl.org/strict
 use warnings; # https://perldoc.perl.org/warnings
@@ -53,19 +53,19 @@ oo_sub - Use object-oriented versions of built-in Perl functions
 
   use oo_sub;
 
-  my $user = getpwnam('root');
+  my $user = getpwnam 'root';
   print $user -> uid;
 
-  my $group = getgrgid(0);
+  my $group = getgrgid 0;
   say $group -> name; # use feature 'say';
 
-  say my $file = stat('.') -> ino;
+  say my $file = stat '.' -> ino;
 
-  printf "%s: %s", getprotobyname('tcp') -> proto, getservbyname('ftp') -> port;
+  printf "%s: %s", getprotobyname 'tcp' -> proto, getservbyname 'ftp' -> port;
 
-  say Dumper getnetbyname('loopback'); # use Data::Dumper;
+  say Dumper getnetbyname 'loopback'; # use Data::Dumper;
 
-  p my $time = localtime('.'); # use DDP; (ie. Data::Printer)
+  p my $time = localtime; # use DDP; (ie. Data::Printer)
 
 =head1 DESCRIPTION
 
