@@ -1,8 +1,7 @@
-use v5.36;
+use strict;
+use warnings;
 use oo_sub;
 use DDP; # CPAN: Data-Printer
-
-# Type of arg 1 to Data::Printer::p must be one of [@$%&] (not subroutine entry)
 
 p my $user = getpwnam( 'root' );
 
@@ -20,4 +19,6 @@ p my $service = getservbyname( 'ftp' );
 
 p my $host = gethostbyname( 'localhost' );
 
-# p ${\getpwnam('root')};
+
+# Type of arg 1 to Data::Printer::p must be one of [@$%&] (not subroutine entry)
+# Alternatively: p ${\getpwnam('root')};

@@ -9,8 +9,8 @@ make
 make manifest
 make dist
 
-# sudo make install
+sudo make install
 # TODO: add a switch for this (installing locally) converting the script to Perl
 
-# cpan-upload
+cpan-upload -d oo_sub *.tar.gz
 # TODO: add a switch for this (uploading to CPAN)
