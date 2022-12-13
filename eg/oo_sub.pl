@@ -1,24 +1,23 @@
 use strict;
 use warnings;
+use feature 'say';
 use oo_sub;
+use Data::Dumper;
 use DDP; # CPAN: Data-Printer
 
-p my $user = getpwnam 'root';
+my $user = getpwnam 'root';
+print $user -> uid;
 
-p my $group = getgrgid 0;
+my $group = getgrgid 0;
+say $group -> name; # use feature 'say';
 
-p my $file = stat '.';
+say my $file = stat( '.' ) -> ino;
 
-p my $time = localtime;
+printf "%s: %s", getprotobyname( 'tcp' ) -> proto, getservbyname( 'ftp' ) -> port;
 
-p my $network = getnetbyname 'loopback';
+say Dumper getnetbyname 'loopback'; # use Data::Dumper;
 
-p my $protocol = getprotobyname 'tcp';
-
-p my $service = getservbyname 'ftp';
-
-p my $host = gethostbyname 'localhost';
-
+p my $time = localtime; # use DDP; (ie. Data::Printer)
 
 # Type of arg 1 to Data::Printer::p must be one of [@$%&] (not subroutine entry)
 # Alternatively: p ${\getpwnam('root')};
