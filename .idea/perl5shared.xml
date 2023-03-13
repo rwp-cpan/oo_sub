@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Perl5Settings">
+    <option name="targetPerlVersion">
+      <PerlVersion />
+    </option>
+    <option name="ALLOW_INJECTIONS_WITH_INTERPOLATION" value="true" />
+    <option name="PERL_CRITIC_ENABLED" value="true" />
+  </component>
+</project>
